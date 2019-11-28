@@ -36,7 +36,7 @@ class Pieza {
         this.borrar();
         this.moverAbajo();
         this.borrar();
-        this.activo = this.tetromino[this.n]
+        this._tetrominoActivo = this.tetromino[this.n]
         this.dibujar();
     }
 
