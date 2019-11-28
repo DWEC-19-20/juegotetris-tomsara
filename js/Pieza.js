@@ -31,7 +31,14 @@ class Pieza {
 
     // rota la piezaentre las distintas formas del tetrominio
     // de debe controlar que si está muy cerca de las paredes algunas no pueden girar
-    rotar = () => {}
+  rotar = () => {
+        this.n = (this.n + 1) % this.tetromino.length;
+        this.borrar();
+        this.moverAbajo();
+        this.borrar();
+        this.activo = this.tetromino[this.n]
+        this.dibujar();
+    }
 
 
     // rellena el tetromino de la pieza con su color en el canvas
