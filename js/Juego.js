@@ -12,6 +12,10 @@ class Juego {
 
     // devuelve una pieza aleatoria
     piezaAleatoria = () => {
+        var rand=Math.floor(Math.random()*7);
+         
+        return  new Pieza(PIEZAS[rand][0],PIEZAS[rand][1],this.tablero);
+        
 
     }
 
@@ -38,6 +42,7 @@ class Juego {
         let delta = ahora - this.comenzarCaer;
         if (delta > 1000) {
             this.pieza.moverAbajo();
+            
             this.comenzarCaer = Date.now();
         }
         if (!this.gameOver) {
