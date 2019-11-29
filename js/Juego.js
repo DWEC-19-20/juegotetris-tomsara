@@ -14,7 +14,6 @@ class Juego {
     piezaAleatoria = () => {
         var pieza;
         pieza = (Math.round(Math.random() * 6));
-        document.write("Pieza activa: "+PIEZAS[pieza][1]);
         return new Pieza(PIEZAS[pieza][0], PIEZAS[pieza][1], this.tablero);
     }
 
