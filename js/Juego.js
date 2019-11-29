@@ -12,9 +12,11 @@ class Juego {
 
     // devuelve una pieza aleatoria
     piezaAleatoria = () => {
-        var pieza;
-        pieza = (Math.round(Math.random() * 6));
-        return new Pieza(PIEZAS[pieza][0], PIEZAS[pieza][1], this.tablero);
+        var rand=Math.floor(Math.random()*7);
+         
+        return  new Pieza(PIEZAS[rand][0],PIEZAS[rand][1],this.tablero);
+        
+
     }
 
     get tablero() {

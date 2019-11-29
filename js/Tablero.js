@@ -82,6 +82,26 @@ class Tablero {
     }
 
     // Eliminamos las filas que estén completas e incrementamos la puntuación
-    eliminarFilasCompletas = () => {}
-
+    eliminarFilasCompletas = () => {
+        for(let r=0; r<this.filas;r++){
+            let isRowFull=true;
+            for(let c=0;c<this.columnas;c++){
+                isRowFull=isRowFull && (this.tab[r][c]!=HUECO);
+            }
+            if (isRowFull){
+                for(let y=r;y>1;y--){
+                    for(let c=0;c<this.columnas;c++){
+                        this.tab[y][c]=this.tab[y-1][c];
+                    }
+                }
+                for(let c=0;c<this.columnas;c++){
+                    this.tab[0][c]=HUECO;
+                }
+               juego.score +=10;
+            }
+        }
+        document.getElementById("score").innerHTML=juego.score;
+    }
+       
+            
 }
