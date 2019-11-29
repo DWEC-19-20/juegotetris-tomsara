@@ -1,8 +1,9 @@
 canvas{
+	display: flex;
 	display: block;
 	margin:0 auto;
 	background-color: black;
-	border: solid 1px rgb(255, 0, 0);
+	border: solid 3px cornflowerblue;
 }
 
 html{
@@ -11,9 +12,17 @@ html{
 
 h1{
 	text-align: center;
-	color: white;
+	color: cornflowerblue;
 }
 
 div{
-	color: red;
+	margin-top: -30%;
+	display: flex;
+	color: cornflowerblue;
+	margin-left: 25%;
+}
+
+#score{
+	margin-top: 0%;
+	margin-left: 0%;
 }
