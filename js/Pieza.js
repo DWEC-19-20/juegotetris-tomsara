@@ -9,7 +9,7 @@ const PIEZAS = [
     [J, "yellow"]
 ];
 
-const HUECO="white";
+const HUECO="black";
 
 
 // La clase pieza

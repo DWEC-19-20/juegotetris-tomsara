@@ -7,6 +7,8 @@ class Juego {
         this.gameOver = false;
         this._comenzarCaer = Date.now();
         this.score = 0;
+        this.level = 1;
+        this._time=1000;
 
     }
 
@@ -40,7 +42,7 @@ class Juego {
     caer = () => {
         let ahora = Date.now();
         let delta = ahora - this.comenzarCaer;
-        if (delta > 1000) {
+        if (delta > this.time) {
             this.pieza.moverAbajo();
             
             this.comenzarCaer = Date.now();
@@ -63,6 +65,27 @@ class Juego {
         } else if (event.keyCode == 40) {
             this.pieza.moverAbajo();
         }
+    }
+    get time(){
+        return this._time;
+    }
+    set time(time){
+        this._time=time;
+    }
+
+    plusTime=()=>{
+        var plus= this.score +50;
+        if(this.score==50){
+            this.level++;
+             this.time(500);
+        }
+        if(this.score>50){
+            if(this.score == plus){
+                this.level++;
+                this.time(this.time-100);
+            }
+        }
+
     }
 
 }

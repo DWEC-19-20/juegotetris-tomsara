@@ -1,28 +1,17 @@
 canvas{
-	display: flex;
 	display: block;
 	margin:0 auto;
 	background-color: black;
-	border: solid 3px cornflowerblue;
+	margin-top:10% ;
+	border:1px red dashed;
 }
-
-html{
+body{
 	background-color: black;
 }
-
-h1{
+ .puntuacion{
+	 margin-left: 5%;
+	 font-size: 1.5em;
+	color:red;
 	text-align: center;
-	color: cornflowerblue;
-}
-
-div{
-	margin-top: -30%;
-	display: flex;
-	color: cornflowerblue;
-	margin-left: 25%;
-}
-
-#score{
-	margin-top: 0%;
-	margin-left: 0%;
-}
+	 width: 200px;
+ }

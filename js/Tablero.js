@@ -38,7 +38,7 @@ class Tablero {
     dibujarCasilla = (x, y, color) => {
         this.ctx.fillStyle = color;
         this.ctx.fillRect(x * this.TC, y * this.TC, this.TC, this.TC);
-        this.ctx.strokeStyle = "BLACK";
+        this.ctx.strokeStyle = "black";
         this.ctx.strokeRect(x * this.TC, y * this.TC, this.TC, this.TC);
     }
 
@@ -98,6 +98,7 @@ class Tablero {
                     this.tab[0][c]=HUECO;
                 }
                juego.score +=10;
+               juego.plusTime(juego.score);
             }
         }
         document.getElementById("score").innerHTML=juego.score;
