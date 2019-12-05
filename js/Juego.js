@@ -7,7 +7,7 @@ class Juego {
         this.gameOver = false;
         this._comenzarCaer = Date.now();
         this.score = 0;
-        this.level = 1;
+        this._level = 1;
         this._time=1000;
 
     }
@@ -72,16 +72,22 @@ class Juego {
     set time(time){
         this._time=time;
     }
+    get level(){
+        return this._level;
+    }
+    set level(level){
+        this._level=level;
+    }
 
     plusTime=()=>{
         var plus= this.score +50;
-        if(this.score==50){
-            this.level++;
-             this.time(500);
+        if(this.score==10){
+            this.level+=1;
+             this.time-=500;
         }
-        if(this.score>50){
+        if(this.score>10){
             if(this.score == plus){
-                this.level++;
+                this.level+=1;
                 this.time(this.time-100);
             }
         }

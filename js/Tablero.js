@@ -98,7 +98,7 @@ class Tablero {
                     this.tab[0][c]=HUECO;
                 }
                juego.score +=10;
-               juego.plusTime(juego.score);
+               juego.plusTime();
             }
         }
         document.getElementById("score").innerHTML=juego.score;
