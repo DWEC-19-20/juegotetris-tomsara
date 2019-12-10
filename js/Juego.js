@@ -60,6 +60,7 @@ class Juego {
             this.pieza.rotar();
             this.comenzarCaer = Date.now();
         } else if (event.keyCode == 39) {
+            
             this.pieza.moverDerecha();
             this.comenzarCaer = Date.now();
         } else if (event.keyCode == 40) {
